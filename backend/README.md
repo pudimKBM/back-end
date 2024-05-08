@@ -1,6 +1,18 @@
 # DESAFIO Hyperativa
 
 This project is a [brief description of what the project does or its purpose].
+- [@antoniovvl](https://www.linkedin.com/in/avvl/)
+## Stack utilizada
+
+- **Back-end:** Flask, pydantic,  SQLAlquemy
+- **Database:** sqlite
+
+## Cosiderations
+- The sqlite makes it easier to create project and test fast so is the database tha we are using in the project today and it will be created in the start of the app in the backend folder
+- The log file will be created in the backend folder and wil log the requests and the user that is making the requests if they are already logged in
+- I also modified the example text file to take out the comments so use the DESAFIO-HYPERATIVA.txt since is the updated one
+- the encription was kind of hard to decide soo i have 2 columns 1 encripted with a simple hash sha256 for the selects on the database and for the validation and retival of the cards and a simple Fernet (symmetric encryption) for the encryption of the cards aswell the keys are in the .env.dev file
+- There is also a postman collection(v2.1) in the backend folder 
 
 ## Installation
 
@@ -17,7 +29,7 @@ Before you begin, make sure you have Conda installed on your system. If you don'
     cd back-end/backend
     ```
 
-2. Create a new Conda environment using the provided `environment.yml` file:
+2. Create a new Conda environment:
 
     ```bash
     conda create --name <env name> -c conda-forge python=3.11
