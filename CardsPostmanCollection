@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "46044223-33e4-403a-a518-4b93d735e218",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5499756"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"antonio@gmail.com\",\r\n    \"password\": \"antonio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"antonio@antonio.com\",\r\n    \"password\": \"antonio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add card",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNTE1MzYzOCwianRpIjoiOWMxNWU2ZTItM2FmYi00YTc3LTkwNzQtMzQwYTA3NjAwNWVlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFudG9uaW8iLCJuYmYiOjE3MTUxNTM2MzgsImNzcmYiOiI1MGY5YjRiYy0xZmYzLTQ2M2EtYjQ1Ny0wMGQwNWZlMzAxZTciLCJleHAiOjE3MTUyNDAwMzh9.mb4P7mK-Ny0HT5It_1qLQMMzY6wklYXOW_yvg8V1wOk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"card_number\": \"1231231231231232\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/card",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Card Batch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNTE1MzYzOCwianRpIjoiOWMxNWU2ZTItM2FmYi00YTc3LTkwNzQtMzQwYTA3NjAwNWVlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFudG9uaW8iLCJuYmYiOjE3MTUxNTM2MzgsImNzcmYiOiI1MGY5YjRiYy0xZmYzLTQ2M2EtYjQ1Ny0wMGQwNWZlMzAxZTciLCJleHAiOjE3MTUyNDAwMzh9.mb4P7mK-Ny0HT5It_1qLQMMzY6wklYXOW_yvg8V1wOk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/anton/Documents/GitHub/back-end/DESAFIO-HYPERATIVA.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/upload",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get card",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNTE1MzYzOCwianRpIjoiOWMxNWU2ZTItM2FmYi00YTc3LTkwNzQtMzQwYTA3NjAwNWVlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFudG9uaW8iLCJuYmYiOjE3MTUxNTM2MzgsImNzcmYiOiI1MGY5YjRiYy0xZmYzLTQ2M2EtYjQ1Ny0wMGQwNWZlMzAxZTciLCJleHAiOjE3MTUyNDAwMzh9.mb4P7mK-Ny0HT5It_1qLQMMzY6wklYXOW_yvg8V1wOk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"antonio\",\r\n    \"password\": \"antonio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/card/1231231231231232",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"card",
+						"1231231231231232"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
